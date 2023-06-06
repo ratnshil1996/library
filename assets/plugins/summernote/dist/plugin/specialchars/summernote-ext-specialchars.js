@@ -89,7 +89,7 @@
 
           var $button = ui.button({
             callback: function($node) {
-              $node.html(text);
+              $node.php(text);
               $node.attr('title', text);
               $node.attr('data-value', encodeURIComponent(text));
               $node.css({
@@ -132,7 +132,7 @@
           context.invoke('editor.restoreRange');
 
           // build node
-          var $node = $('<span></span>').html(selectChar)[0];
+          var $node = $('<span></span>').php(selectChar)[0];
 
           if ($node) {
             // insert video node

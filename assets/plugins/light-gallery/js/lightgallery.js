@@ -428,7 +428,7 @@
 
         var html;
         if (this.s.dynamic) {
-            html = this.s.dynamicEl[index].html;
+            html = this.s.dynamicEl[index].php;
         } else {
             html = this.$items.eq(index).attr('data-html');
         }
@@ -439,7 +439,7 @@
                     html5: true
                 };
             } else {
-                console.error('lightGallery :- data-src is not pvovided on slide item ' + (index + 1) + '. Please make sure the selector property is properly configured. More info - http://sachinchoolur.github.io/lightGallery/demos/html-markup.html');
+                console.error('lightGallery :- data-src is not pvovided on slide item ' + (index + 1) + '. Please make sure the selector property is properly configured. More info - http://sachinchoolur.github.io/lightGallery/demos/html-markup.php');
                 return false;
             }
         }
@@ -512,9 +512,9 @@
                 var fL = subHtml.substring(0, 1);
                 if (fL === '.' || fL === '#') {
                     if (this.s.subHtmlSelectorRelative && !this.s.dynamic) {
-                        subHtml = $currentEle.find(subHtml).html();
+                        subHtml = $currentEle.find(subHtml).php();
                     } else {
-                        subHtml = $(subHtml).html();
+                        subHtml = $(subHtml).php();
                     }
                 }
             } else {
@@ -527,7 +527,7 @@
             if (subHtmlUrl) {
                 this.$outer.find(this.s.appendSubHtmlTo).load(subHtmlUrl);
             } else {
-                this.$outer.find(this.s.appendSubHtmlTo).html(subHtml);
+                this.$outer.find(this.s.appendSubHtmlTo).php(subHtml);
             }
 
         } else {
@@ -622,7 +622,7 @@
                 _poster = _this.s.dynamicEl[index].poster;
             }
 
-            _html = _this.s.dynamicEl[index].html;
+            _html = _this.s.dynamicEl[index].php;
             _src = _this.s.dynamicEl[index].src;
 
             if (_this.s.dynamicEl[index].responsive) {
@@ -733,7 +733,7 @@
         });
 
         // @todo check load state for html5 videos
-        if (_isVideo && _isVideo.html5 && !_hasPoster) {
+        if (_isVideo && _isVideo.php5 && !_hasPoster) {
             _this.$slide.eq(index).addClass('lg-complete');
         }
 
