@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+	    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-            <div class="main-wrapper">
+        <div class="main-wrapper">
         <div class="header"> <!-- Header start -->
             <div class="header-left">
                 <a href="index.php" class="logo">
@@ -134,259 +134,139 @@
         <?php include 'sidebar.php'; ?>
         <div class="page-wrapper"> <!-- content -->
             <div class="content container-fluid">
-				<div class="page-header">
+                <div class="page-header">
 					<div class="row">
 						<div class="col-lg-7 col-md-12 col-sm-12 col-12">
-							<h5 class="text-uppercase">Teachers</h5>
+							<h5 class="text-uppercase">add teacher</h5>
 						</div>
 						<div class="col-lg-5 col-md-12 col-sm-12 col-12">
 							<ul class="list-inline breadcrumb float-right">
-								<li class="list-inline-item"><a href="#">Home</a></li>
-								<li class="list-inline-item"><a href="#">Teachers</a></li>
-								<li class="list-inline-item"> All Teachers</li>
+								<li class="list-inline-item"><a href="index.php">Home</a></li>
+								<li class="list-inline-item"><a href="index.php">Teacher</a></li>
+								<li class="list-inline-item"> Add Teacher</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-                <div class="row">
-                    <div class="col-sm-4 col-3">
-                    </div>
-                    <div class="col-sm-8 col-9 text-right m-b-20">
-                        <a href="add-teacher.php" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Teacher</a>
-                        <div class="view-icons">
-                            <a href="all-teachers.php" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
-                            <a href="teachers-list.php" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
-                        </div>
-                    </div>
-                </div>
-			<div class="content-page">
-                <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="number"  />
-							<label class="control-label">Book ID</label><i class="bar"></i>
+				<div class="page-content">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="card">
+								<div class="page-title">
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="page-title">basic information</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="card-body">	
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+											 <form>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">Firstname</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">Email</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="password"  />
+													<label class="control-label">Password</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">Subject</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<select >
+														<option>Male</option>
+														<option>Female</option>
+													 </select>
+													 <label class="control-label">Gender</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													 <input class="datetimepicker" type="text"> 
+													<label class="control-label">Birth Date</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">Class</label><i class="bar"></i>
+												</div>
+											</form>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+											<form>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  >
+													<label class="control-label">Lastname</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													 <input class="form-control floating datetimepicker" type="text" >
+													<label class="control-label">Joining Date</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="password"  />
+													<label class="control-label">Confirm Password</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="number"  />
+													<label class="control-label">Mobile number</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<select >
+														<option>Computer</option>
+														<option>Science</option>
+														<option>Maths</option>
+														<option>Tamil</option>
+														<option>English</option>
+														<option>Social Science</option>
+													 </select>
+													 <label class="control-label">Subject</label><i class="bar"></i>
+												</div>		
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">ID</label><i class="bar"></i>
+												</div>
+												<div class="form-group custom-mt-form-group">
+													<input type="text"  />
+													<label class="control-label">Section</label><i class="bar"></i>
+												</div>
+																						
+											</form>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+											<form>
+												<div class="form-group">
+													<textarea id="message" class="form__field" placeholder="Premanent Address" rows="4"></textarea>
+													<label for="message" class="form-label">Premanent Address</label>
+												</div>
+											</form>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+											<form>
+												<div class="form-group custom-mt-form-group">
+													  <input type="file" name="pic" accept="image/*" style="margin-bottom:10px;">
+													<label class="control-label"></label><i class="bar"></i>
+												</div>
+											</form>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+											<form>
+												<div class="form-group text-center custom-mt-form-group">
+													<button class="btn btn-primary mr-2" type="submit">Submit</button>
+													<button class="btn btn-secondary" type="reset">Cancel</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="text"  />
-							<label class="control-label">Book Name</label><i class="bar"></i>
-						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="text"  />
-							<label class="control-label">Book Name</label><i class="bar"></i>
-						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<select class="">
-								 <option>Marathi</option>
-                                 <option>Hindi</option>
-                                 <option>English</option>
-							 </select>
-							 <label class="control-label">Language</label><i class="bar"></i>
-						</div>	
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a href="#" class="btn btn-success btn-block mt-4 mb-2"> Search </a>
-                    </div>
-                </div>
-                <div class="row staff-grid-row">
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php"><img class="avatar" src="assets/img/user.jpg" alt=""></a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Ruth C. Gault</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">M</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Michael V. Buttars</a></h4>
-                            <div class="small text-muted">Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">John Smith</a></h4>
-                            <div class="small text-muted">Social Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">M</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Mike Litorus</a></h4>
-                            <div class="small text-muted">Finance</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">W</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Wilmer Deluna</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Jeffrey Warden</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">B</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Bernardo Galaviz</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">L</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Lesley Grauer</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Jeffery Lalor</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">L</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Loren Gatlin</a></h4>
-                            <div class="small text-muted">Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">T</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Tarah Shropshire</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">C</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Catherine Manseau</a></h4>
-                            <div class="small text-muted">Science</div>
-                        </div>
-                    </div>
-                </div>
+					</div>
+				</div>
             </div>
             <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
@@ -414,7 +294,7 @@
                                 <a href="chat.php">
                                     <div class="list-item new-message">
                                         <div class="list-left">
-                                            <span class="avatar">R</span>
+                                            <span class="avatar">J</span>
                                         </div>
                                         <div class="list-body">
                                             <span class="message-author">Ruth C. Gault</span>
@@ -597,28 +477,10 @@
                     </div>
                 </div>
             </div>
-			</div>
-        </div>
-		  <div id="delete_employee" class="modal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content modal-md">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Delete Employee</h4>
-                    </div>
-                    <form>
-                        <div class="modal-body card-box">
-                            <p>Are you sure want to delete this?</p>
-                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+       <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/popper.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>

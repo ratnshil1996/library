@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-    <title>Preschool - Bootstrap Admin Template</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
-</head>
-
-<body>
-            <div class="main-wrapper">
+<?php include 'header.php'; ?>
+	<div class="main-wrapper">
         <div class="header"> <!-- Header start -->
             <div class="header-left">
                 <a href="index.php" class="logo">
@@ -131,259 +111,315 @@
                 </div>
             </div>
         </div>
-        <?php include 'sidebar.php'; ?>
-        <div class="page-wrapper"> <!-- content -->
+<?php include 'sidebar.php'; ?>
+		<div class="page-wrapper"> <!-- content -->
             <div class="content container-fluid">
-				<div class="page-header">
+			<div class="page-header">
 					<div class="row">
 						<div class="col-lg-7 col-md-12 col-sm-12 col-12">
-							<h5 class="text-uppercase">Teachers</h5>
+							<h5 class="text-uppercase">Data Tables</h5>
 						</div>
 						<div class="col-lg-5 col-md-12 col-sm-12 col-12">
 							<ul class="list-inline breadcrumb float-right">
 								<li class="list-inline-item"><a href="#">Home</a></li>
-								<li class="list-inline-item"><a href="#">Teachers</a></li>
-								<li class="list-inline-item"> All Teachers</li>
+								<li class="list-inline-item"><a href="#">Tables</a></li>
+								<li class="list-inline-item">Data Tables</li>
 							</ul>
 						</div>
 					</div>
 				</div>
+               
                 <div class="row">
-                    <div class="col-sm-4 col-3">
-                    </div>
-                    <div class="col-sm-8 col-9 text-right m-b-20">
-                        <a href="add-teacher.php" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Teacher</a>
-                        <div class="view-icons">
-                            <a href="all-teachers.php" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
-                            <a href="teachers-list.php" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
-                        </div>
-                    </div>
-                </div>
-			<div class="content-page">
-                <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="number"  />
-							<label class="control-label">Book ID</label><i class="bar"></i>
-						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="text"  />
-							<label class="control-label">Book Name</label><i class="bar"></i>
-						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<input type="text"  />
-							<label class="control-label">Book Name</label><i class="bar"></i>
-						</div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-						<div class="form-group custom-mt-form-group">
-							<select class="">
-								 <option>Marathi</option>
-                                 <option>Hindi</option>
-                                 <option>English</option>
-							 </select>
-							 <label class="control-label">Language</label><i class="bar"></i>
-						</div>	
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a href="#" class="btn btn-success btn-block mt-4 mb-2"> Search </a>
-                    </div>
-                </div>
-                <div class="row staff-grid-row">
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php"><img class="avatar" src="assets/img/user.jpg" alt=""></a>
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="card-block">
+                                <h6 class="card-title text-bold">Default Datatable</h6><br>
+                                <p class="content-group">
+                                    This is the most basic example of the datatables with zero configuration. Use the <code>.datatable</code> class to initialize datatables.
+                                </p>
+                                <table class="table table-striped table-bordered datatable" id="kk">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:70px;width:auto;">Exam Name </th>
+                                        <th style="min-width:50px;">Subject</th>
+										<th style="min-width:50px;">Class</th>
+										<th style="min-width:50px;">Section</th>
+										<th style="min-width:50px;">Time</th>
+										<th style="min-width:50px;">Date</th>
+                                        <th class="text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="about-book.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="about-book.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar">J</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									  <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                           <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                           <h2> <a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                           <h2> <a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            <h2><a href="exam-detail.php" class="avatar text-white">C</a></h2>
+                                            <h2><a href="exam-detail.php">Class Test</a></h2>
+                                        </td>
+                                        <td>Maths</td>
+                                        <td>1</td>
+                                        <td>B</td>
+                                        <td>10.00 am-11.00 am</td>
+                                        <td>20/12/2018</td>
+                                        <td class="text-right" >
+											<a href="edit-exam.php" class="btn btn-primary btn-sm mb-1">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</a>
+											<button type="submit" data-toggle="modal" data-target="#delete_employee" class="btn btn-danger btn-sm mb-1">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											</button>
+										</td>
+                                    </tr>
+									
+                                </tbody>
+                            </table>
                             </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Ruth C. Gault</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">M</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Michael V. Buttars</a></h4>
-                            <div class="small text-muted">Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">John Smith</a></h4>
-                            <div class="small text-muted">Social Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">M</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Mike Litorus</a></h4>
-                            <div class="small text-muted">Finance</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">W</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Wilmer Deluna</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Jeffrey Warden</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">B</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Bernardo Galaviz</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">L</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Lesley Grauer</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">J</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Jeffery Lalor</a></h4>
-                            <div class="small text-muted">H.O.D</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">L</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Loren Gatlin</a></h4>
-                            <div class="small text-muted">Science</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">T</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Tarah Shropshire</a></h4>
-                            <div class="small text-muted">Maths</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
-                        <div class="profile-widget">
-                            <div class="profile-img">
-                                <a href="profile.php" class="avatar">C</a>
-                            </div>
-                            <div class="dropdown profile-action">
-                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="edit-teacher.php"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                </div>
-                            </div>
-                            <h4 class="user-name m-t-10 m-b-0 text-ellipsis"><a href="profile.php">Catherine Manseau</a></h4>
-                            <div class="small text-muted">Science</div>
                         </div>
                     </div>
                 </div>
@@ -414,7 +450,7 @@
                                 <a href="chat.php">
                                     <div class="list-item new-message">
                                         <div class="list-left">
-                                            <span class="avatar">R</span>
+                                            <span class="avatar">J</span>
                                         </div>
                                         <div class="list-body">
                                             <span class="message-author">Ruth C. Gault</span>
@@ -597,35 +633,8 @@
                     </div>
                 </div>
             </div>
-			</div>
-        </div>
-		  <div id="delete_employee" class="modal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content modal-md">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Delete Employee</h4>
-                    </div>
-                    <form>
-                        <div class="modal-body card-box">
-                            <p>Are you sure want to delete this?</p>
-                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
-    <script type="text/javascript" src="assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="assets/js/moment.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-</body>
-
-</html>
+    
+    <?php include 'footer.php'; ?>

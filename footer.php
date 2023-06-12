@@ -22,6 +22,11 @@
         table.destroy();
         $('#sample').DataTable();
         });
+        $(document).ready(function() {
+        var table = $('#kk').DataTable();
+        table.destroy();
+        $('#kk').DataTable();
+        });
     </script>
 </body>
 
